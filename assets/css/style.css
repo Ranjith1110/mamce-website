@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 html{
     scroll-behavior: smooth;
 }
@@ -7,7 +9,7 @@ html{
     padding: 0;
     box-sizing: border-box;
     transition: 0.3s ease !important;
-    font-family: 'OpenSans-Regular';
+    /* font-family: 'OpenSans-Regular'; */
 }
 
 :root {
