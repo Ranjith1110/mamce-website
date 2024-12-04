@@ -1,9 +1,13 @@
+html{
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     transition: 0.3s ease !important;
-    font-family: 'OpenSans-Regular' !important;
+    font-family: 'OpenSans-Regular';
 }
 
 :root {
@@ -49,4 +53,11 @@
 
 a {
     text-decoration: none;
+}
+
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
 }
