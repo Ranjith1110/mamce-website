@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.3s ease !important;
+    font-family: 'OpenSans-Regular' !important;
+}
+
+:root {
+    --bg-color: #E4EDEC;
+    --secondary: #F57E57;
+    --light: #EEF9FF;
+    --main: #5bd3c7;
+    --main-hover: #ffbd59;
+    --dark: #000;
+}
+
+/* OpenSans Start here */
+@font-face {
+    font-family: 'OpenSans-Light';
+    src: url('/assets/fonts/OpenSans-Light.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OpenSans-Regular';
+    src: url('/assets/fonts/OpenSans-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OpenSans-SemiBold';
+    src: url('/assets/fonts/OpenSans-SemiBold.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OpenSans-Bold';
+    src: url('/assets/fonts/OpenSans-Bold.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OpenSans-ExtraBold';
+    src: url('/assets/fonts/OpenSans-ExtraBold.ttf') format('truetype');
+    font-display: swap;
+}
+/* OpenSans End here */
+
+a {
+    text-decoration: none;
+}
