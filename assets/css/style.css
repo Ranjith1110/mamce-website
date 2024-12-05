@@ -94,7 +94,8 @@ a {
 /* Navbar End here */
 
 /* Carousel Start here */
-.carousel-control-prev-icon, .carousel-control-next-icon {
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
     height: 100px;
     width: 100px;
     background-color: rgba(0, 0, 0, 3);
@@ -102,5 +103,21 @@ a {
     border-radius: 8px;
     padding: 20px;
 }
-/* Carousel End here */
 
+@media (max-width: 769px) {
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        padding: 6px;
+    }
+}
+
+/* Carousel End here */
