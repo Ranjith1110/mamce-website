@@ -68,10 +68,6 @@ a {
 
 @media (max-width: 992px) {
 
-    .navbar-nav {
-        text-align: center;
-    }
-
     .mamce-logo {
         width: 250px;
     }
@@ -110,9 +106,8 @@ a {
 
 .modal-content {
     border-radius: 10px;
-    padding: 30px;
+    padding: 25px;
 }
-
 /* Vertical Button End here */
 
 /* Carousel Start here */
