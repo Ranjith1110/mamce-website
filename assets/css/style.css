@@ -14,7 +14,7 @@ html {
 :root {
     --bg-color: #E4EDEC;
     --white: #fff;
-    --main: #ca3521;
+    --main: rgb(202, 53, 33);
     --dark: #000;
 }
 
@@ -48,6 +48,7 @@ html {
     src: url('/assets/fonts/OpenSans-ExtraBold.ttf') format('truetype');
     font-display: swap;
 }
+
 /* OpenSans End here */
 
 a {
@@ -84,9 +85,10 @@ h2::selection {
 @media (max-width: 500px) {
 
     .mamce-logo {
-        width: 200px;
+        width: 170px;
     }
 }
+
 /* Navbar End here */
 
 /* Vertical Button Start here */
@@ -108,6 +110,7 @@ h2::selection {
     border-radius: 10px;
     padding: 25px;
 }
+
 /* Vertical Button End here */
 
 /* Carousel Start here */
@@ -147,3 +150,58 @@ h2::selection {
 }
 
 /* About End here */
+
+
+/*** Project Portfolio ***/
+
+.info-inner {
+    position: relative;
+    overflow: hidden;
+}
+
+.info-inner::before,
+.info-inner::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(202, 53, 33, .6);
+    transition: .5s;
+}
+
+.info-inner::after {
+    left: auto;
+    right: 0;
+}
+
+.info-inner:hover::before,
+.info-inner:hover::after {
+    width: 50%;
+}
+
+.info-inner .info-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+    z-index: 333;
+    opacity: 0;
+}
+
+.info-inner:hover .info-text {
+    transition-delay: .3s;
+    opacity: 1;
+}
+
+.info-inner .info-text .btn:hover {
+    background: var(--primary);
+    color: var(--light);
+}
