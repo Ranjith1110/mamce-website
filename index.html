@@ -14,6 +14,37 @@
     <!-- Fontawesome Link for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
 
+    <style>
+        /* Glassmorphism background */
+        .modal-content {
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+        }
+
+        /* Glassmorphic input fields */
+        .form-control,
+        .form-select {
+            background: rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(5px);
+            border-radius: 8px;
+            padding: 10px;
+            font-size: 1rem;
+            color: #000;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: rgba(211, 32, 50, 0.5);
+            box-shadow: 0 0 8px rgba(232, 39, 58, 0.5);
+            outline: none;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -180,6 +211,59 @@
     </nav>
     <!-- Navbar End here -->
 
+    <!-- Vertical Button Start here -->
+    <button class="vertical-button bg-danger text-white px-1 py-3 rounded text-uppercase" data-bs-toggle="modal"
+        data-bs-target="#popupForm">
+        Admission Enquiry
+    </button>
+    <!-- Vertical Button End here -->
+
+    <!-- Popup Form Start here -->
+    <div class="modal fade" id="popupForm" tabindex="-1" aria-labelledby="popupFormLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title bold" id="popupFormLabel">Admission Enquiry</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Address</label>
+                            <textarea class="form-control" id="address" rows="2"
+                                placeholder="Enter your address"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="course" class="form-label">Course Selection</label>
+                            <select class="form-select" id="course">
+                                <option selected disabled>Choose your course</option>
+                                <option value="Course 1">Course 1</option>
+                                <option value="Course 2">Course 2</option>
+                                <option value="Course 3">Course 3</option>
+                            </select>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-danger w-50">Apply Now</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Popup Form End here -->
+
     <!-- Carousel Start here -->
     <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
@@ -210,7 +294,11 @@
     </div>
     <!-- Carousel End here -->
 
-    
+    <section>
+        <div>
+
+        </div>
+    </section>
 
     <!-- External Js -->
     <script src="./assets/js/script.js"></script>

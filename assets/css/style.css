@@ -93,6 +93,27 @@ a {
 
 /* Navbar End here */
 
+/* Vertical Button Start here */
+.vertical-button {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%), ;
+    transform: rotate(180deg);
+    writing-mode: vertical-rl;
+    text-align: center;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    z-index: 1050;
+}
+
+.modal-content {
+    border-radius: 10px;
+}
+
+/* Vertical Button End here */
+
 /* Carousel Start here */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
