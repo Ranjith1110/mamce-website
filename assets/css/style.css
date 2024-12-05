@@ -118,19 +118,14 @@ a {
 /* Carousel Start here */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    height: 100px;
-    width: 100px;
-    background-color: rgba(0, 0, 0, 3);
-    background-size: 50%, 50%;
-    border-radius: 8px;
-    padding: 20px;
+    padding: 30px;
 }
 
 @media (max-width: 769px) {
 
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
-        padding: 15px;
+        padding: 20px;
     }
 }
 
