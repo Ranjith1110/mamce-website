@@ -13,10 +13,8 @@ html {
 
 :root {
     --bg-color: #E4EDEC;
-    --secondary: #F57E57;
-    --light: #EEF9FF;
-    --main: #5bd3c7;
-    --main-hover: #ffbd59;
+    --white: #fff;
+    --main: #ca3521;
     --dark: #000;
 }
 
@@ -58,8 +56,8 @@ a {
 }
 
 h2::selection {
-    background-color: #ca3521;
-    color: white;
+    background-color: var(--main);
+    color: var(--white);
 }
 
 #spinner {
