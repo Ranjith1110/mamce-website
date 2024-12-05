@@ -92,3 +92,15 @@ a {
 }
 
 /* Navbar End here */
+
+/* Carousel Start here */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 100px;
+    width: 100px;
+    background-color: rgba(0, 0, 0, 3);
+    background-size: 50%, 50%;
+    border-radius: 8px;
+    padding: 20px;
+}
+/* Carousel End here */
+
