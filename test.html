@@ -1,78 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vertical Button with Popup Form</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        /* Style for the vertical button */
-        .vertical-button {
-            position: fixed;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%),;
-            transform: rotate(180deg);
-            writing-mode: vertical-rl;
-            text-align: center;
-            font-weight: 500;
-            border: none;
-            cursor: pointer;
-            z-index: 1050;
-        }
-        .modal-content {
-            border-radius: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Light Gradient</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ffe5e1, #fddcc9, #f7e8b6);
+      background-size: 200% 200%;
+      animation: lightGradientAnimation 8s ease infinite;
+      font-family: Arial, sans-serif;
+      color: #555;
+      text-align: center;
+    }
+
+    @keyframes lightGradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #8a4b44;
+      text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.8);
+    }
+  </style>
 </head>
 <body>
-    <!-- Vertical Button -->
-    <button class="vertical-button bg-danger text-white px-1 py-3 rounded text-uppercase" data-bs-toggle="modal" data-bs-target="#popupForm">
-        Admission Enquiry
-    </button>
-
-    <!-- Popup Form Modal -->
-    <div class="modal fade" id="popupForm" tabindex="-1" aria-labelledby="popupFormLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="popupFormLabel">Admission Enquiry</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
-                        </div>
-                        <div class="mb-3">
-                            <label for="phone" class="form-label">Phone Number</label>
-                            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
-                        </div>
-                        <div class="mb-3">
-                            <label for="address" class="form-label">Address</label>
-                            <textarea class="form-control" id="address" rows="2" placeholder="Enter your address"></textarea>
-                        </div>
-                        <div class="mb-3">
-                            <label for="course" class="form-label">Course Selection</label>
-                            <select class="form-select" id="course">
-                                <option selected disabled>Choose your course</option>
-                                <option value="Course 1">Course 1</option>
-                                <option value="Course 2">Course 2</option>
-                                <option value="Course 3">Course 3</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn-success w-100">Apply Now</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <h1>Subtle Animated Gradient</h1>
 </body>
 </html>
