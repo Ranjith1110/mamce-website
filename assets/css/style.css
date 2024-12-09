@@ -204,6 +204,7 @@ h2::selection {
     background: var(--primary);
     color: var(--light);
 }
+
 /* Get More Info Start here */
 
 
@@ -218,23 +219,23 @@ h2::selection {
     border-radius: 4px;
     opacity: 0;
     transition: .5s;
-  }
-  
-  .courses-item:hover .courses-btn {
+}
+
+.courses-item:hover .courses-btn {
     opacity: 1;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     border: 15px solid rgba(202, 53, 33, .6);
-  }
-  
-  .courses-item i {
+}
+
+.courses-item i {
     opacity: 0;
     transition: .3s;
     transition-delay: .3s;
-  }
-  
-  .courses-item:hover i {
+}
+
+.courses-item:hover i {
     opacity: 1;
-  }
+}
