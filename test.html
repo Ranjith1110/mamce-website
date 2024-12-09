@@ -1,44 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Animated Light Gradient</title>
+  <title>Transparent Navbar</title>
+  <link rel="stylesheet" href="styles.css">
   <style>
-    body {
-      margin: 0;
+    /* Reset */
+
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+    }
+
+    .transparent {
+      background-color: transparent;
+      /* Initial transparent state */
+    }
+
+    .scrolled {
+      background-color: #fff;
+      /* Color on scroll */
+      color: white;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+    }
+
+    .nav-links li {
+      margin: 0 10px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.3s ease;
+    }
+
+    .scrolled .nav-links a {
+      color: white;
+    }
+
+    /* Header Section */
+    header {
       height: 100vh;
       display: flex;
-      justify-content: center;
       align-items: center;
-      background: linear-gradient(135deg, #ffe5e1, #fddcc9, #f7e8b6);
-      background-size: 200% 200%;
-      animation: lightGradientAnimation 8s ease infinite;
-      font-family: Arial, sans-serif;
-      color: #555;
+      justify-content: center;
+      background: url('background.jpg') no-repeat center center/cover;
+      color: white;
       text-align: center;
     }
 
-    @keyframes lightGradientAnimation {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    }
-
-    h1 {
-      font-size: 2rem;
-      color: #8a4b44;
-      text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.8);
+    section {
+      padding: 100px 20px;
     }
   </style>
 </head>
+
 <body>
-  <h1>Subtle Animated Gradient</h1>
+  <nav id="navbar" class="navbar transparent">
+    <div class="container">
+      <a href="#" class="logo">Logo</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header id="home">
+    <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
+      <video width="100%" src="./assets/Mamce-Campas.mp4" autoplay controls></video>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Information about us...</p>
+  </section>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const navbar = document.getElementById('navbar');
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+    });
+
+  </script>
 </body>
+
 </html>
