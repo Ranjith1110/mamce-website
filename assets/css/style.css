@@ -152,8 +152,7 @@ h2::selection {
 /* About End here */
 
 
-/*** Project Portfolio ***/
-
+/* Get More Info Start here */
 .info-inner {
     position: relative;
     overflow: hidden;
@@ -205,9 +204,10 @@ h2::selection {
     background: var(--primary);
     color: var(--light);
 }
+/* Get More Info Start here */
 
 
-.portfolio-item .portfolio-btn {
+.courses-item .courses-btn {
     position: absolute;
     width: 0;
     height: 0;
@@ -220,7 +220,7 @@ h2::selection {
     transition: .5s;
   }
   
-  .portfolio-item:hover .portfolio-btn {
+  .courses-item:hover .courses-btn {
     opacity: 1;
     width: 100%;
     height: 100%;
@@ -229,12 +229,12 @@ h2::selection {
     border: 15px solid rgba(202, 53, 33, .6);
   }
   
-  .portfolio-item i {
+  .courses-item i {
     opacity: 0;
     transition: .3s;
     transition-delay: .3s;
   }
   
-  .portfolio-item:hover i {
+  .courses-item:hover i {
     opacity: 1;
   }
