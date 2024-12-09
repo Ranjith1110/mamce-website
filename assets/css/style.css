@@ -166,7 +166,7 @@ h2::selection {
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(202, 53, 33, .6);
+    background: rgba(255, 255, 255, 0.6);
     transition: .5s;
 }
 
