@@ -208,8 +208,6 @@ h2::selection {
 /* Get More Info Start here */
 
 /* Courses Style Start here */
-
-
 .courses-item {
     border: 2px solid #adadad;
 }
@@ -220,6 +218,7 @@ h2::selection {
 
 /* Courses Style End here */
 
+/* Departments Start here */
 .dep-banner div div {
     top: 55%;
     left: 50%;
@@ -230,11 +229,85 @@ h2::selection {
     font-size: 2.6rem;
 }
 
+.about-dep-head div {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 18%;
+    border: 3px solid #ca3521;
+    opacity: 0.6;
+}
+
+.sidebar {
+    border-right: 1px solid #ddd;
+    height: 100vh;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.sidebar li.active {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    border-left: 4px solid #ca3521;
+}
+
+.sidebar li:hover {
+    background-color: #f1f1f1;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.box {
+    border: 2px solid #cce5ff;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 20px;
+    background: #f9f9f9;
+}
+
 @media (max-width: 769px) {
 
     .dep-banner div div h2 {
         font-size: 2rem;
         text-align: center;
+    }
+
+    .sidebar {
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        height: auto;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .sidebar li {
+        border-left: none;
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .sidebar li.active {
+        background-color: #f8f9fa;
+        border-left: none;
+        border-bottom: 2px solid #ca3521;
     }
 
 }
@@ -252,3 +325,5 @@ h2::selection {
     }
 
 }
+
+/* Departments End here */
