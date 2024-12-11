@@ -207,7 +207,6 @@ h2::selection {
 
 /* Get More Info Start here */
 
-
 .courses-item .courses-btn {
     position: absolute;
     width: 0;
@@ -238,4 +237,12 @@ h2::selection {
 
 .courses-item:hover i {
     opacity: 1;
+}
+
+/* Courses Style Start here */
+
+.dep-banner div div {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
