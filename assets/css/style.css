@@ -207,39 +207,18 @@ h2::selection {
 
 /* Get More Info Start here */
 
-.courses-item .courses-btn {
-    position: absolute;
-    width: 0;
-    height: 0;
-    bottom: 50%;
-    left: 50%;
-    /* background: rgba(228, 228, 228, 0.1); */
-    /* border: 1px solid transparent; */
-    border-radius: 4px;
-    opacity: 0;
-    transition: .3s;
-}
-
-.courses-item:hover .courses-btn {
-    opacity: 1;
-    width: 100%;
-    /* height: 100%; */
-    bottom: 0;
-    left: 0;
-    /* border: 1px solid rgba(22, 8, 6, 0.6); */
-}
-
-.courses-item i {
-    opacity: 0;
-    transition: .3s;
-    transition-delay: .3s;
-}
-
-.courses-item:hover i {
-    opacity: 1;
-}
-
 /* Courses Style Start here */
+
+
+.courses-item {
+    border: 2px solid #adadad;
+}
+
+.courses-item:hover {
+    transform: scale(1.05);
+}
+
+/* Courses Style End here */
 
 .dep-banner div div {
     top: 55%;
