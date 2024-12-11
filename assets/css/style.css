@@ -246,3 +246,13 @@ h2::selection {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+@media (max-width: 769px) {
+
+    .dep-banner div div {
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+}
