@@ -239,7 +239,7 @@ h2::selection {
 
 .sidebar {
     border-right: 1px solid #ddd;
-    height: 100vh;
+    height: 100%;
 }
 
 .sidebar ul {
