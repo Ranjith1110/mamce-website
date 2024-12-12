@@ -220,13 +220,13 @@ h2::selection {
 
 /* Departments Start here */
 .dep-banner div div {
-    top: 55%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 .dep-banner div div h2 {
-    font-size: 2.6rem;
+    font-size: 3rem;
 }
 
 .about-dep-head div {
@@ -273,8 +273,11 @@ h2::selection {
 @media (max-width: 769px) {
 
     .dep-banner div div h2 {
-        font-size: 2rem;
-        text-align: center;
+        font-size: 2.8rem;
+    }
+
+    .dep-banner div img {
+        height: 100vh;
     }
 
     .sidebar {
@@ -305,14 +308,8 @@ h2::selection {
 
 @media (max-width: 500px) {
 
-    .dep-banner div div {
-        top: 65%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
     .dep-banner div div h2 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 
 }
