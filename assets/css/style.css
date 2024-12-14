@@ -315,3 +315,12 @@ h2::selection {
 }
 
 /* Departments End here */
+
+/* Administration Start here */
+
+@media (max-width: 993px){
+    .reverse-sm {
+        flex-direction: column-reverse;
+    }
+}
+
