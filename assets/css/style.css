@@ -318,9 +318,10 @@ h2::selection {
 
 /* Administration Start here */
 
-@media (max-width: 993px){
+@media (max-width: 993px) {
+
     .reverse-sm {
         flex-direction: column-reverse;
     }
-}
 
+}
