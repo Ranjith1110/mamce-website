@@ -92,10 +92,24 @@ h2::selection {
 /* Navbar End here */
 
 /* Vertical Button Start here */
+.vertical-button1 {
+    position: fixed;
+    top: 65.5%;
+    right: 0%;
+    transform: translateY(-50%), ;
+    transform: rotate(180deg);
+    writing-mode: vertical-rl;
+    text-align: center;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    z-index: 1050;
+}
+
 .vertical-button {
     position: fixed;
-    right: 0;
-    top: 50%;
+    top: 40%;
+    right: 0%;
     transform: translateY(-50%), ;
     transform: rotate(180deg);
     writing-mode: vertical-rl;
@@ -125,6 +139,11 @@ h2::selection {
     .carousel-control-next-icon {
         padding: 20px;
     }
+
+    .vertical-button1 {
+        top: 58.2%;
+        right: 0%;
+    }
 }
 
 @media (max-width: 500px) {
@@ -132,6 +151,24 @@ h2::selection {
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
         padding: 6px;
+    }
+
+    .vertical-button1 {
+        top: 58.2%;
+        right: 0%;
+    }
+    .vertical-button {
+        position: fixed;
+        top: 30%;
+        right: 0%;
+        transform: translateY(-50%), ;
+        transform: rotate(180deg);
+        writing-mode: vertical-rl;
+        text-align: center;
+        font-weight: 500;
+        border: none;
+        cursor: pointer;
+        z-index: 1050;
     }
 }
 
