@@ -265,14 +265,6 @@ h2::selection {
     font-size: 3rem;
 }
 
-.about-dep-head div {
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 18%;
-    border: 3px solid #ca3521;
-    opacity: 0.6;
-}
-
 .sidebar {
     border-right: 1px solid #ddd;
     height: 100%;
