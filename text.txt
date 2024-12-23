@@ -1,3 +1,7 @@
 Ranjith is here!
+<<<<<<< HEAD
 
 How to avoid conflict
+=======
+I want pull request from muthu
+>>>>>>> 1d29bb164cfc1236a191c8e4bfa3b0f31863a123
