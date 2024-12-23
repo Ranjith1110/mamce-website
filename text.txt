@@ -1,7 +1,0 @@
-Ranjith is here!
-<<<<<<< HEAD
-I want pull request from muthu
-=======
-
-How to avoid conflict
->>>>>>> 5630dbd90043b63620e6dc0338bf83496f4c608d
