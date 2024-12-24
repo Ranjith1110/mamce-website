@@ -357,8 +357,6 @@ h2::selection {
 
 /* About Page Start here */
 .table-container {
-    /* margin: 20px auto; */
-    /* width: 80%; */
     overflow-x: auto;
 }
 
@@ -385,3 +383,49 @@ h2::selection {
 }
 
 /* About Page End here */
+
+/*** Campus Page Start here ***/
+.campus-item .campus-text {
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    background: #FFFFFF;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .06);
+    transition: .5s;
+    z-index: 2;
+}
+
+.campus-item:hover .campus-text {
+    top: -1.5rem;
+}
+
+.campus-item .campus-text h5 {
+    transition: .5s;
+}
+
+.campus-item:hover .campus-text h5 {
+    color: var(--primary);
+}
+
+.campus-item .campus-btn {
+    position: absolute;
+    width: 80%;
+    height: 3rem;
+    left: 10%;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .07);
+    transition: .5s;
+    z-index: 1;
+}
+
+.campus-item:hover .campus-btn {
+    bottom: -1.5rem;
+}
+
+/*** Campus Page Start here ***/
