@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link href="/assets/images/web-title-logo.png" rel="icon" />
+
+    <!-- External Css -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/fastbootstrap@2.2.0/dist/css/fastbootstrap.min.css" rel="stylesheet" />
+    <!-- Fontawesome Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+
+    <style>
+        /* Glassmorphism background */
+        .modal-content {
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+        }
+
+        .modal-content-admin {
+            background: #fff;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+        }
+
+        /* Glassmorphic input fields */
+        .form-control,
+        .form-select {
+            background: rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(5px);
+            border-radius: 8px;
+            padding: 10px;
+            font-size: 1rem;
+            color: #000;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: rgba(211, 32, 50, 0.5);
+            box-shadow: 0 0 8px rgba(232, 39, 58, 0.5);
+            outline: none;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .scrolled {
+            background-color: white;
+            color: black;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .scrolled .nav-link {
+            color: black !important;
+        }
+
+        @media (max-width: 769px) {
+            .navbar {
+                background: #fff;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Spinner Start here -->
+    <div id="spinner"
+        class="bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End here -->
+
+    <!-- Top Navbar Start here -->
+    <div class="container-fluid bg-danger fixed-top p-0">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3">
+                    <small class="fa-solid fa-graduation-cap text-white fs-5 me-2"></small>
+                    <small class="text-white fs-5 fw-bold">Counselling Code : 3810</small>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fas fa-phone-alt text-white me-2"></small>
+                    <small class="text-white">+91 9952522022</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square bg-white text-danger me-1" href="https://www.facebook.com/mamce.trichy/"
+                        target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square bg-white text-danger me-1"
+                        href="https://www.linkedin.com/school/mamceofficial/posts/?feedView=all" target="_blank"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-sm-square bg-white text-danger me-0" href="" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Top Navbar End here -->
+
+    <!-- Navbar and banner Start here -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light px-4 py-1 mt-lg-12 mt-0">
+        <a href="" class="navbar-brand d-flex align-items-center">
+            <img width="300px" class="mamce-logo m-0" src="/assets/images/mamce-logo.png" alt="">
+        </a>
+        <button type="button" class="navbar-toggler me-4 collapsed" data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link fs-6">Home</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle fs-6" data-bs-toggle="dropdown"
+                        aria-expanded="false">About</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="./aboutPages/about.html" class="dropdown-item">About Mamce</a>
+                        <a href="" class="dropdown-item">History of Mamce</a>
+                        <a href="./aboutPages/administration.html" class="dropdown-item">Administration</a>
+                        <a href="" class="dropdown-item">Mandatory Disclosure</a>
+                        <a href="" class="dropdown-item">MAMCE In News</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="" class="nav-link dropdown-toggle fs-6" data-bs-toggle="dropdown"
+                        aria-expanded="false">Courses</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <div class="d-flex">
+                            <div>
+                                <p class="dropdown-item h4">UG COURSES</p>
+                                <a href="" class="dropdown-item"><span class="text-danger fw-bolder">></span> B.E(Cyber
+                                    Security)</a>
+                                <a href="" class="dropdown-item"><span class="text-danger fw-bolder">></span>
+                                    B.E(Artificial Intelligence & Machine Learning)</a>
+                                <a href="" class="dropdown-item"><span class="text-danger fw-bolder">></span> B.Tech(Bio
+                                    Technology)</a>
+                                <a href="" class="dropdown-item"><span class="text-danger fw-bolder">></span>
+                                    B.E(Bio-Medical Engineering)</a>
+                                <a href="" class="dropdown-item"><span class="text-danger fw-bolder">></span> B.Tech
+                                    (Food Technology)</a>
+                                <a href="" class="dropdown-item"><span class="text-danger fw-bolder">></span>
+                                    B.Tech(Artificial Intelligence & Data Science)</a>
+                                <a href="" class="dropdown-item"><span class="text-danger fw-bolder">></span>
+                                    B.Tech(Agricultural Engineering)</a>
+                                <a href="" class="dropdown-item"><span class="text-danger fw-bolder">></span>
+                                    B.E(Computer Science & Engineering)</a>
+                                <a href="" class="dropdown-item"><span class="text-danger fw-bolder">></span>
+                                    B.E(Electrical & Electronics Engineering)</a>
+                                <a href="" class="dropdown-item"><span class="text-danger fw-bolder">></span>
+                                    B.E(Electronics & Communication Engineering)</a>
+                                <a href="" class="dropdown-item"><span class="text-danger fw-bolder">></span>
+                                    B.E(Electronics & Instrumentation Engineering)</a>
+                                <a href="" class="dropdown-item"><span class="text-danger fw-bolder">></span>
+                                    B.Tech(Information Technology)</a>
+                                <a href="" class="dropdown-item"><span class="text-danger fw-bolder">></span>
+                                    B.E(Mechanical Engineering)</a>
+                                <a href="" class="dropdown-item"><span class="text-danger fw-bolder">></span> B.E(Civil
+                                    Engineering)</a>
+                            </div>
+                            <div>
+                                <p class="dropdown-item h4">PG COURSES</p>
+                                <a href="" class="dropdown-item"><span class="text-danger fw-bolder">></span>
+                                    M.E(Computer Science & Engineering)</a>
+                                <a href="" class="dropdown-item"><span class="text-danger fw-bolder">></span>
+                                    M.E(Environmental Engineering)</a>
+                                <a href="" class="dropdown-item"><span class="text-danger fw-bolder">></span> M.E(Power
+                                    Electronics & Drives)</a>
+                                <a href="" class="dropdown-item"><span class="text-danger fw-bolder">></span>
+                                    M.E(Manufacturing Engineering)</a>
+                                <a href="" class="dropdown-item"><span class="text-danger fw-bolder">></span>
+                                    M.E(Electronics & Communication Engineering)</a>
+                                <a href="" class="dropdown-item"><span class="text-danger fw-bolder">></span> MBA(Master
+                                    of Business Administration)</a>
+                                <a href="" class="dropdown-item"><span class="text-danger fw-bolder">></span> MCA(Master
+                                    of Computer Applications)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="" class="nav-item nav-link fs-6">Campus</a>
+                <a href="" class="nav-item nav-link fs-6">Placement</a>
+                <div class="nav-item dropdown">
+                    <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Online
+                        Payment</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="" class="dropdown-item">Tuition Fees</a>
+                        <a href="" class="dropdown-item">Exam Fees</a>
+                        <a href="" class="dropdown-item">Other Fees</a>
+                        <a href="" class="dropdown-item">New Admission Fees</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="" class="nav-link dropdown-toggle fs-6" data-bs-toggle="dropdown"
+                        aria-expanded="false">Admission</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="" class="dropdown-item">Courses Offered</a>
+                        <a href="" class="dropdown-item">Admission Norms</a>
+                        <a href="" class="dropdown-item">Admission Policy</a>
+                        <a href="" class="dropdown-item">Scholarship</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link fs-6">EoA</a>
+                <a href="contact.html" class="nav-item nav-link fs-6">NIRF</a>
+                <div class="nav-item dropdown">
+                    <a href="" class="nav-link dropdown-toggle fs-6" data-bs-toggle="dropdown"
+                        aria-expanded="false">Clubs</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="" class="dropdown-item">YRC</a>
+                        <a href="" class="dropdown-item">NSS</a>
+                        <a href="" class="dropdown-item">EDC</a>
+                        <a href="" class="dropdown-item">CSI Chapters</a>
+                        <a href="" class="dropdown-item">Tech Club</a>
+                        <a href="" class="dropdown-item">DM Club</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="" class="nav-link dropdown-toggle fs-6" data-bs-toggle="dropdown"
+                        aria-expanded="false">Login</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="" class="dropdown-item">Staff</a>
+                        <a href="" class="dropdown-item">Student</a>
+                        <a href="" class="dropdown-item">Alumini</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link fs-6">Contact</a>
+                <div class="d-lg-none bg-danger text-center mt-4 py-4 rounded fs-2 fw-bold">
+                    <small class="fa-solid fa-graduation-cap text-white me-2"></small>
+                    <small class="text-white">Counselling Code : 3810</small>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar and banner End here -->
+
+    <!-- Vertical Button Start here -->
+    <button class="vertical-button bg-danger text-white px-md-2 px-0 py-3 rounded text-uppercase" data-bs-toggle="modal"
+        data-bs-target="#popupForm">
+        Admission Enquiry
+    </button>
+    <button class="vertical-button1 bg-danger text-white px-md-2 px-0 py-3 rounded text-uppercase"
+        data-bs-toggle="modal" data-bs-target="#popupForm">
+        Book Your Admission
+    </button>
+    <!-- Vertical Button End here -->
+
+    <!-- Popup Form Start here -->
+    <div class="modal fade" id="popupForm" tabindex="-1" aria-labelledby="popupFormLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold fs-2" id="popupFormLabel">Admission Enquiry</h5>
+                    <button type="button" class="btn-close text-bg-dark" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label text-dark">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label  text-dark">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label  text-dark">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label  text-dark">Address</label>
+                            <textarea class="form-control" id="address" rows="2"
+                                placeholder="Enter your address"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="course" class="form-label  text-dark">Course Selection</label>
+                            <select class="form-select" id="course">
+                                <option selected disabled>Choose your course</option>
+                                <option value="Course 1">Course 1</option>
+                                <option value="Course 2">Course 2</option>
+                                <option value="Course 3">Course 3</option>
+                            </select>
+                        </div>
+                        <div class="text-center mt-5">
+                            <button type="submit" class="btn btn-danger w-50">Apply Now</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Popup Form End here -->
+
+    <!-- Banner Section Start here -->
+    <section id="banner">
+        <div class="dep-banner">
+            <div class="py-lg-10 py-md-8 py-6 position-relative">
+                <img class="w-100 object-fit-cover" src="/assets/images/administrationImg/administration-banner.svg"
+                    alt="">
+                <div class="position-absolute">
+                    <h2 class="text-white text-center fw-bolder">Courses</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner Section End here -->
+
+    <!-- Courses Start here -->
+    <section id="courses">
+        <div class="container-fluid">
+
+            <div class="py-lg-10 py-md-8 py-6">
+
+                <div class="row g-lg-0 px-lg-0 px-md-0 px-5 gap-lg-3 gap-0 justify-content-center">
+
+                    <div class="text-center my-5">
+                        <p class="h5 bg-danger d-inline text-white px-3 py-2 rounded">UG Courses</p>
+                    </div>
+
+                    <a href="/departments/ug/civil.html"
+                        class="col-lg-3 col-md-6 mb-4 courses-item shadow rounded bg-white text-decoration-none" target="_blank
+                    ">
+                        <div class="position-relative d-flex gap-4 align-items-center p-8">
+                            <img class="img-fluid" src="./assets/images/courses-img/pg-icons/civil-engineering.png"
+                                alt="">
+                            <h5 class="text-start text-black m-0">Civil Engineering</h5>
+                        </div>
+                    </a>
+
+                    <a href="/departments/ug/cse.html"
+                        class="col-lg-3 col-md-6 mb-4 courses-item shadow rounded bg-white text-decoration-none" target="_blank
+                        ">
+                        <div class="position-relative d-flex gap-4 align-items-center p-8">
+                            <img class="img-fluid" src="./assets/images/courses-img/pg-icons/cse.png" alt="">
+                            <h5 class="text-start text-black m-0">Computer Science & Engineering</h5>
+                        </div>
+                    </a>
+
+                    <a href="/departments/ug/eee.html"
+                        class="col-lg-3 col-md-6 mb-4 courses-item shadow rounded bg-white text-decoration-none" target="_blank
+                        ">
+                        <div class="position-relative d-flex gap-4 align-items-center p-8">
+                            <img class="img-fluid" src="./assets/images/courses-img/pg-icons/eee.png" alt="">
+                            <h5 class="text-start text-black m-0">Electrical & Electronics Engineering</h5>
+                        </div>
+                    </a>
+
+                    <a href="/departments/ug/ece.html"
+                        class="col-lg-3 col-md-6 mb-4 courses-item shadow rounded bg-white text-decoration-none" target="_blank
+                        ">
+                        <div class="position-relative d-flex gap-4 align-items-center p-8">
+                            <img class="img-fluid" src="./assets/images/courses-img/pg-icons/ece.png" alt="">
+                            <h5 class="text-start text-black m-0">Electronics & Communication Engineering</h5>
+                        </div>
+                    </a>
+
+                    <a href="/departments/ug/eie.html"
+                        class="col-lg-3 col-md-6 mb-4 courses-item shadow rounded bg-white text-decoration-none" target="_blank
+                    ">
+                        <div class="position-relative d-flex gap-4 align-items-center p-8">
+                            <img class="img-fluid" src="./assets/images/courses-img/pg-icons/eie.png" alt="">
+                            <h5 class="text-start text-black m-0">Electronics & Instrumentation Engineering</h5>
+                        </div>
+                    </a>
+
+                    <a href="/departments/ug/it.html"
+                        class="col-lg-3 col-md-6 mb-4 courses-item shadow rounded bg-white text-decoration-none" target="_blank
+                    ">
+                        <div class="position-relative d-flex gap-4 align-items-center p-8">
+                            <img class="img-fluid" src="./assets/images/courses-img/pg-icons/it.png" alt="">
+                            <h5 class="text-center text-black m-0">Information Technology</h5>
+                        </div>
+                    </a>
+
+                    <a href="/departments/ug/mechanical.html"
+                        class="col-lg-3 col-md-6 mb-4 courses-item shadow rounded bg-white text-decoration-none" target="_blank
+                    ">
+                        <div class="position-relative d-flex gap-4 align-items-center p-8">
+                            <img class="img-fluid" src="./assets/images/courses-img/pg-icons/mechanical-engineering.png"
+                                alt="">
+                            <h5 class="text-start text-black m-0">Mechanical Engineering</h5>
+                        </div>
+                    </a>
+
+                    <a href="/departments/ug/ai&ds.html"
+                        class="col-lg-3 col-md-6 mb-4 courses-item shadow rounded bg-white text-decoration-none" target="_blank
+                        ">
+                        <div class="position-relative d-flex gap-4 align-items-center p-8">
+                            <img class="img-fluid" src="./assets/images/courses-img/pg-icons/ai&ds.png" alt="">
+                            <h5 class="text-start text-black m-0">Artificial intelligence & Data Science</h5>
+                        </div>
+                    </a>
+
+                    <a href="/departments/ug/agricultural.html"
+                        class="col-lg-3 col-md-6 mb-4 courses-item shadow rounded bg-white text-decoration-none" target="_blank
+                        ">
+                        <div class="position-relative d-flex gap-4 align-items-center p-8">
+                            <img class="img-fluid"
+                                src="./assets/images/courses-img/pg-icons/agricultural-engineering.png" alt="">
+                            <h5 class="text-start text-black m-0">Agricultural Engineering</h5>
+                        </div>
+                    </a>
+
+                    <a href="/departments/ug/bio-medical.html"
+                        class="col-lg-3 col-md-6 mb-4 courses-item shadow rounded bg-white text-decoration-none" target="_blank
+                        ">
+                        <div class="position-relative d-flex gap-4 align-items-center p-8">
+                            <img class="img-fluid" src="./assets/images/courses-img/pg-icons/bio-medical.png" alt="">
+                            <h5 class="text-start text-black m-0">Bio-Medical Engineering</h5>
+                        </div>
+                    </a>
+
+                    <a href="/departments/ug/food-technology.html"
+                        class="col-lg-3 col-md-6 mb-4 courses-item shadow rounded bg-white text-decoration-none" target="_blank
+                    ">
+                        <div class="position-relative d-flex gap-4 align-items-center p-8">
+                            <img class="img-fluid" src="./assets/images/courses-img/pg-icons/food-technology.png"
+                                alt="">
+                            <h5 class="text-start text-black m-0">Food Technology</h5>
+                        </div>
+                    </a>
+
+                    <a href="/departments/ug/bio-tech.html"
+                        class="col-lg-3 col-md-6 mb-4 courses-item shadow rounded bg-white text-decoration-none" target="_blank
+                    ">
+                        <div class="position-relative d-flex gap-4 align-items-center p-8">
+                            <img class="img-fluid" src="./assets/images/courses-img/pg-icons/bio-technology.png" alt="">
+                            <h5 class="text-start text-black m-0">Bio Technology</h5>
+                        </div>
+                    </a>
+
+                    <a href="/departments/ug/cyber-security.html"
+                        class="col-lg-3 col-md-6 mb-4 courses-item shadow rounded bg-white text-decoration-none" target="_blank
+                        ">
+                        <div class="position-relative d-flex gap-4 align-items-center p-8">
+                            <img class="img-fluid" src="./assets/images/courses-img/pg-icons/cyber-security.png" alt="">
+                            <h5 class="text-start text-black m-0">Cyber Security</h5>
+                        </div>
+                    </a>
+
+                    <a href="/departments/ug/ai&ml.html"
+                        class="col-lg-3 col-md-6 mb-4 courses-item shadow rounded bg-white text-decoration-none" target="_blank
+                        ">
+                        <div class="position-relative d-flex gap-4 align-items-center p-8">
+                            <img class="img-fluid" src="./assets/images/courses-img/pg-icons/ai&ml.png" alt="">
+                            <h5 class="text-start text-black m-0">Artificial Intelligence & Machine Learning</h5>
+                        </div>
+                    </a>
+
+                    <div class="text-center my-5">
+                        <p class="h5 bg-danger d-inline text-white px-3 py-2 rounded">PG Courses</p>
+                    </div>
+
+                    <a href="/departments/pg/mba.html"
+                        class="col-lg-3 col-md-6 mb-4 courses-item shadow rounded bg-white text-decoration-none" target="_blank
+                    ">
+                        <div class="position-relative d-flex gap-4 align-items-center p-8">
+                            <img class="img-fluid"
+                                src="./assets/images/courses-img/ug-icons/master-of-business-administration.png" alt="">
+                            <h5 class="text-start text-black m-0">Master of Business Administration</h5>
+                        </div>
+                    </a>
+
+                    <a href="" class="col-lg-3 col-md-6 mb-4 courses-item shadow rounded bg-white text-decoration-none"
+                        target="_blank
+                    ">
+                        <div class="position-relative d-flex gap-4 align-items-center p-8">
+                            <img class="img-fluid"
+                                src="./assets/images/courses-img/ug-icons/master-of-computer-applications.png" alt="">
+                            <h5 class="text-start text-black m-0">Master of Computer Applications</h5>
+                        </div>
+                    </a>
+
+                    <a href="" class="col-lg-3 col-md-6 mb-4 courses-item shadow rounded bg-white text-decoration-none"
+                        target="_blank
+                    ">
+                        <div class="position-relative d-flex gap-4 align-items-center p-8">
+                            <img class="img-fluid"
+                                src="./assets/images/courses-img/ug-icons/environmental-engineering.png" alt="">
+                            <h5 class="text-start text-black m-0">Environmental Engineering</h5>
+                        </div>
+                    </a>
+
+                    <a href="" class="col-lg-3 col-md-6 mb-4 courses-item shadow rounded bg-white text-decoration-none"
+                        target="_blank
+                    ">
+                        <div class="position-relative d-flex gap-4 align-items-center p-8">
+                            <img class="img-fluid" src="./assets/images/courses-img/ug-icons/cse.png" alt="">
+                            <h5 class="text-start text-black m-0">Computer Science & Engineering</h5>
+                        </div>
+                    </a>
+
+                    <a href="" class="col-lg-3 col-md-6 mb-4 courses-item shadow rounded bg-white text-decoration-none"
+                        target="_blank
+                    ">
+                        <div class="position-relative d-flex gap-4 align-items-center p-8">
+                            <img class="img-fluid" src="./assets/images/courses-img/ug-icons/ece.png" alt="">
+                            <h5 class="text-start text-black m-0">Electronics & Communication Engineering</h5>
+                        </div>
+                    </a>
+
+                    <a href="" class="col-lg-3 col-md-6 mb-4 courses-item shadow rounded bg-white text-decoration-none"
+                        target="_blank
+                    ">
+                        <div class="position-relative d-flex gap-4 align-items-center p-8">
+                            <img class="img-fluid" src="./assets/images/courses-img/ug-icons/ped.png" alt="">
+                            <h5 class="text-start text-black m-0">Power Electronics & Drives</h5>
+                        </div>
+                    </a>
+
+                    <a href="" class="col-lg-3 col-md-6 mb-4 courses-item shadow rounded bg-white text-decoration-none"
+                        target="_blank
+                    ">
+                        <div class="position-relative d-flex gap-4 align-items-center p-8">
+                            <img class="img-fluid"
+                                src="./assets/images/courses-img/ug-icons/manufacturing-engineering.png" alt="">
+                            <h5 class="text-start text-black m-0">Manufacturing Engineering</h5>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Courses End here -->
+
+    <!-- Upcoming Events Start here -->
+    <section id="upcoming">
+        <div class="container">
+            <div class="">
+                <h2 class="text-center mb-lg-10 title fw-bold text-secondary">UPCOMING EVENTS</h2>
+                <h4 class="text-center mb-lg-10">Coming Soon..</h4>
+            </div>
+        </div>
+    </section>
+    <!-- Upcoming Events End here -->
+
+    <!-- UNIVERSITY RANK HOLDERS Start here -->
+    <!-- UNIVERSITY RANK HOLDERS End here -->
+
+    <!-- Footer Start here -->
+    <footer>
+        <div class="container-fluid bg-dark text-light py-10">
+            <div class="container pt-3">
+                <div class="row pt-4">
+
+                    <div class="col-lg-3 col-md-6 mb-lg-0 mb-10">
+                        <h5 class="text-white mb-8">UG COURSES OFFERED</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white mb-1" href="#">Artificial Intelligence and Machine Learning</a>
+                            <a class="text-white mb-1" href="#">Cyber Security</a>
+                            <a class="text-white mb-1" href="#">Bio Technology</a>
+                            <a class="text-white mb-1" href="#">Artificial Intelligence and Data Science</a>
+                            <a class="text-white mb-1" href="#">Agricultural Engineering</a>
+                            <a class="text-white mb-1" href="#">Computer Science and Engineering</a>
+                            <a class="text-white mb-1" href="#">Electrical & Electronics Engineering</a>
+                            <a class="text-white mb-1" href="#">Electronics and Communication Engineering</a>
+                            <a class="text-white mb-1" href="#">Electronics and Instrumentation Engineering</a>
+                            <a class="text-white mb-1" href="#">Information Technology</a>
+                            <a class="text-white mb-1" href="#">Mechanical Engineering</a>
+                            <a class="text-white mb-1" href="#">Civil Engineering</a>
+                            <a class="text-white mb-1" href="#">Biomedical Engineering</a>
+                            <a class="text-white mb-1" href="#">Food Technology</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-lg-0 mb-10">
+                        <h5 class="text-white mb-8">PG COURSES OFFERED</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white mb-1" href="#">Computer Science & Engineering</a>
+                            <a class="text-white mb-1" href="#">Environmental Engineering</a>
+                            <a class="text-white mb-1" href="#">Power Electronics & Drives</a>
+                            <a class="text-white mb-1" href="#">Manufacturing Engineering</a>
+                            <a class="text-white mb-1" href="#">Electronics & Communication Engineering</a>
+                            <a class="text-white mb-1" href="#">Master of Business Administration</a>
+                            <a class="text-white mb-1" href="#">Master of Computer Applications</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-lg-0 mb-10">
+                        <h5 class="text-white mb-8">HELP & SUPPORT</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white mb-1" href="#">Grievance Committee</a>
+                            <a class="text-white mb-1" href="#">Apply</a>
+                            <a class="text-white mb-1" href="#">Disclosure</a>
+                            <a class="text-white mb-1" href="#">Research</a>
+                            <a class="text-white mb-1" href="#">Contact</a>
+                            <a class="text-white mb-1" href="#">Terms of Service</a>
+                            <a class="text-white mb-1" href="#">Privacy Policy</a>
+                            <a class="text-white" href="#">Refund Policy</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-8">Get In Touch</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <p class="text-light mb-3">Address: M.A.M. College of Engineering, Trichy - Chennai Trunk
+                                Road, Siruganur, Tiruchirappalli - 621 105, Tamil Nadu, India.</p>
+                            <p class="text-light mb-3">Phone: 04312650550, 9952522022, 9952182828</p>
+                            <a class="text-light" href="#">Email: secretary@mamce.org</a>
+                        </div>
+                        <h5 class="text-white mt-8 mb-4">SOCIAL MEDIA</h5>
+                        <div class="d-inline-flex align-items-center">
+                            <a class="btn btn-sm-square bg-white text-danger me-1"
+                                href="https://www.facebook.com/mamce.trichy/" target="_blank"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-sm-square bg-white text-danger me-1"
+                                href="https://www.linkedin.com/school/mamceofficial/posts/?feedView=all"
+                                target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-sm-square bg-white text-danger me-0" href="" target="_blank"><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-dark text-center py-2">
+            <div style="border-top: 1px solid #9d9999;"></div>
+            <p class="mt-3 mb-1 text-white">Copyrights © 2024 MAMCE . All rights reserved.</p>
+            <p class="m-0 text-white">Design by Website Development Team</p>
+        </div>
+    </footer>
+    <!-- Footer End here -->
+
+    <!-- External Js -->
+    <script src="/assets/js/script.js"></script>
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navbar = document.getElementById('navbar');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 1) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
