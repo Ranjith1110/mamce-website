@@ -15,6 +15,7 @@ html {
     --bg-color: #E4EDEC;
     --white: #fff;
     --main: #dfcfc1;
+    --main-sec: #9d7651;
     --dark: #000;
 }
 
@@ -284,7 +285,7 @@ h2::selection {
 .sidebar li.active {
     background-color: #f8f9fa;
     font-weight: bold;
-    border-left: 4px solid #ca3521;
+    border-left: 4px solid var(--main-sec);
 }
 
 .sidebar li:hover {
