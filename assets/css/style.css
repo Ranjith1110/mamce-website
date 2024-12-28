@@ -247,7 +247,7 @@ h2::selection {
 
 /* Courses Style Start here */
 .courses-item {
-    border: 2px solid #adadad;
+    border-radius: 8px;
 }
 
 .courses-item:hover {
