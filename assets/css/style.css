@@ -57,9 +57,10 @@ a {
 }
 
 h2::selection {
-    background-color: var(--main);
+    background-color: var(--dark);
     color: var(--white);
 }
+
 
 #spinner {
     opacity: 0;
@@ -178,7 +179,12 @@ h2::selection {
 
 /* About Start here */
 .title {
-    font-size: 2rem;
+    display: inline-block;
+    color: var(--main-sec);
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 700;
+    border-radius: 2px;
 }
 
 @media (max-width: 500px) {
