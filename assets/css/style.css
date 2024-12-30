@@ -323,7 +323,7 @@ h2::selection {
     .sidebar li.active {
         background-color: #f8f9fa;
         border-left: none;
-        border-bottom: 2px solid #ca3521;
+        border-bottom: 3px solid var(--main-sec);
     }
 
 }
