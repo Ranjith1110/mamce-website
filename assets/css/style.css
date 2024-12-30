@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'); */
 
 html {
     scroll-behavior: smooth;
@@ -9,6 +9,7 @@ html {
     padding: 0;
     box-sizing: border-box;
     transition: 0.3s ease !important;
+    font-family: 'OpenSans-Regular';
 }
 
 :root {
@@ -21,32 +22,11 @@ html {
 
 /* OpenSans Start here */
 @font-face {
-    font-family: 'OpenSans-Light';
-    src: url('/assets/fonts/OpenSans-Light.ttf') format('truetype');
-    font-display: swap;
-}
-
-@font-face {
     font-family: 'OpenSans-Regular';
-    src: url('/assets/fonts/OpenSans-Regular.ttf') format('truetype');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'OpenSans-SemiBold';
-    src: url('/assets/fonts/OpenSans-SemiBold.ttf') format('truetype');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'OpenSans-Bold';
-    src: url('/assets/fonts/OpenSans-Bold.ttf') format('truetype');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'OpenSans-ExtraBold';
-    src: url('/assets/fonts/OpenSans-ExtraBold.ttf') format('truetype');
+    /* src: url('/assets/fonts/AVFontimer-Regular.ttf') format('truetype'); */
+    /* src: url('/assets/fonts/Bestigia-Regular.ttf') format('truetype'); */
+    src: url('/assets/fonts/EspumaPro-Regular.otf') format('truetype');
+    /* src: url('/assets/fonts/OpenSans-Regular.ttf') format('truetype'); */
     font-display: swap;
 }
 
@@ -95,6 +75,7 @@ h2::selection {
 
 /* Vertical Button Start here */
 .vertical-button1 {
+    font-family: 'OpenSans-Regular';
     position: fixed;
     top: 65.5%;
     right: 0%;
@@ -109,6 +90,7 @@ h2::selection {
 }
 
 .vertical-button {
+    font-family: 'OpenSans-Regular';
     position: fixed;
     top: 40%;
     right: 0%;
@@ -182,9 +164,13 @@ h2::selection {
     display: inline-block;
     color: var(--main-sec);
     text-transform: uppercase;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 700;
     border-radius: 2px;
+}
+
+.title-slogan {
+    color: var(--main-sec);
 }
 
 @media (max-width: 500px) {
