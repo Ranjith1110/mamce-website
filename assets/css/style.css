@@ -246,6 +246,18 @@ h2::selection {
     transform: scale(1.05);
 }
 
+@media (max-width: 768px) {
+
+    .courses-btn {
+        flex-direction: column;
+    }
+
+    .courses-btn a {
+        margin-top: 10px;
+    }
+
+}
+
 /* Courses Style End here */
 
 /* Departments Start here */
@@ -414,7 +426,33 @@ h2::selection {
 }
 
 .campus-item:hover .campus-btn {
+    background-color: var(--main-sec);
     bottom: -1.5rem;
 }
 
+.campus-item:hover .campus-btn a{
+    color: var(--white);
+}
+
 /*** Campus Page Start here ***/
+
+/* Contact Page start */
+.contact-image {
+    background: url('/assets/images/contact.jpg') center center / cover no-repeat;
+}
+
+.contact-container {
+    background-color: #e6f0eb;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Contact Page end */
