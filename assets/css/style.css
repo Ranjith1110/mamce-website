@@ -74,7 +74,7 @@ h2::selection {
 /* Navbar End here */
 
 /* Vertical Button Start here */
-.vertical-button1 {
+/* .vertical-button1 {
     font-family: 'OpenSans-Regular';
     position: fixed;
     top: 65.5%;
@@ -87,12 +87,12 @@ h2::selection {
     border: none;
     cursor: pointer;
     z-index: 1050;
-}
+} */
 
 .vertical-button {
     font-family: 'OpenSans-Regular';
     position: fixed;
-    top: 40%;
+    top: 50%;
     right: 0%;
     transform: translateY(-50%), ;
     transform: rotate(180deg);
