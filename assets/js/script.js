@@ -9,9 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.classList.remove('scrolled');
         }
     });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
 
     const sidebarItems = document.querySelectorAll(".sidebar li");
     const contentSections = document.querySelectorAll(".content-section");

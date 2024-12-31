@@ -1,135 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Sidebar Navigation</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        /* Custom styles */
-        .sidebar {
-            border-right: 1px solid #ddd;
-            height: 100%;
-            position: sticky;
-            top: 0;
-        }
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-        }
-        .sidebar li {
-            padding: 10px 20px;
-            cursor: pointer;
-        }
-        .sidebar li.active {
-            background-color: #f8f9fa;
-            font-weight: bold;
-            border-left: 4px solid #fdb913; /* Yellow indicator */
-        }
-        .sidebar li:hover {
-            background-color: #f1f1f1;
-        }
-        .content-section {
-            display: none;
-        }
-        .content-section.active {
-            display: block;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Layout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f9f9f9;
+    }
 
-        /* Responsive styles */
-        @media (max-width: 768px) {
-            .sidebar {
-                border-right: none;
-                border-bottom: 1px solid #ddd;
-                height: auto;
-            }
-            .sidebar ul {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .sidebar li {
-                border-left: none;
-                flex: 1 1 50%;
-                text-align: center;
-            }
-            .sidebar li.active {
-                background-color: #f8f9fa;
-                border-left: none;
-                border-bottom: 2px solid #fdb913;
-            }
-        }
-    </style>
+    .grid-container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 800px;
+      gap: 5px;
+      justify-content: center;
+    }
+
+    .grid-item {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px 25px;
+      /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      transition: background-color 0.2s ease, box-shadow 0.2s ease;
+      font-size: 14px;
+    }
+
+    .grid-item:hover {
+      background-color: #f0f0f0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .grid-item span {
+      font-size: 16px;
+      margin-left: 8px;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      .grid-item {
+        flex: 1 1 15%;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <!-- Sidebar -->
-            <div class="col-lg-3 col-md-4 sidebar">
-                <ul class="p-0">
-                    <li class="active" data-target="about">ABOUT</li>
-                    <li data-target="department-highlights">DEPARTMENT HIGHLIGHTS</li>
-                    <li data-target="hod-desk">HOD'S DESK</li>
-                    <li data-target="curriculum">CURRICULUM</li>
-                </ul>
-            </div>
-
-            <!-- Content -->
-            <div class="col-lg-9 col-md-8 p-4">
-                <!-- About Section -->
-                <div id="about" class="content-section active">
-                    <h2>About</h2>
-                    <p>
-                        B.Tech Artificial Intelligence and Data Science is an undergraduate programme which is essential for the present digital world...
-                    </p>
-                    <button class="btn btn-primary">VIEW PROGRAM OUTCOMES</button>
-                </div>
-
-                <!-- Department Highlights Section -->
-                <div id="department-highlights" class="content-section">
-                    <h2>Department Highlights</h2>
-                    <p>Details about department highlights will go here.</p>
-                </div>
-
-                <!-- HOD's Desk Section -->
-                <div id="hod-desk" class="content-section">
-                    <h2>HOD's Desk</h2>
-                    <p>Details about the HOD's desk will go here.</p>
-                </div>
-
-                <!-- Curriculum Section -->
-                <div id="curriculum" class="content-section">
-                    <h2>Curriculum</h2>
-                    <p>Details about the curriculum will go here.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom Script -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const sidebarItems = document.querySelectorAll(".sidebar li");
-            const sections = document.querySelectorAll(".content-section");
-
-            sidebarItems.forEach(item => {
-                item.addEventListener("click", () => {
-                    // Remove 'active' class from all sidebar items
-                    sidebarItems.forEach(i => i.classList.remove("active"));
-                    item.classList.add("active");
-
-                    // Hide all sections
-                    sections.forEach(section => section.classList.remove("active"));
-
-                    // Show the target section
-                    const targetId = item.getAttribute("data-target");
-                    document.getElementById(targetId).classList.add("active");
-                });
-            });
-        });
-    </script>
+  <div class="grid-container">
+    <div class="grid-item">Civil Engineering<span>➤</span></div>
+    <div class="grid-item">Computer Science & Engineering<span>➤</span></div>
+    <div class="grid-item">Electrical & Electronics Engineering<span>➤</span></div>
+    <div class="grid-item">Electronics & Communication Engineering<span>➤</span></div>
+    <div class="grid-item">Electronics & Instrumentation Engineering<span>➤</span></div>
+    <div class="grid-item">Information Technology<span>➤</span></div>
+    <div class="grid-item">Mechanical Engineering<span>➤</span></div>
+    <div class="grid-item">Artificial intelligence & Data Science<span>➤</span></div>
+    <div class="grid-item">Agricultural Engineering<span>➤</span></div>
+    <div class="grid-item">Bio-Medical Engineering<span>➤</span></div>
+    <div class="grid-item">Food Technology<span>➤</span></div>
+    <div class="grid-item">Bio Technology<span>➤</span></div>
+    <div class="grid-item">Cyber Security<span>➤</span></div>
+    <div class="grid-item">Artificial Intelligence & Machine Learning<span>➤</span></div>
+  </div>
 </body>
 </html>
