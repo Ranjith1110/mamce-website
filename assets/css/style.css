@@ -15,8 +15,8 @@ html {
 :root {
     --bg-color: #E4EDEC;
     --white: #fff;
-    --main: #dfcfc1;
-    --main-sec: #9d7651;
+    --main: rgb(223, 207, 193);
+    --main-sec: rgb(157, 118, 81);
     --dark: #000;
 }
 
@@ -234,8 +234,18 @@ h2::selection {
     background: var(--primary);
     color: var(--light);
 }
-
 /* Get More Info Start here */
+
+/* facilities Start */
+.facilities {
+    background: linear-gradient(rgba(22, 21, 21, 0.5), rgba(4, 4, 4, 0.9)), url(/assets/images/contact.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* facilities End */
 
 /* Courses Style Start here */
 .courses-item {
