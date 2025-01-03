@@ -15,8 +15,8 @@ html {
 :root {
     --bg-color: #E4EDEC;
     --white: #fff;
-    --main: rgb(223, 207, 193);
-    --main-sec: rgb(157, 118, 81);
+    --main: #dfcfc1;
+    --main-sec: #9d7651;
     --dark: #000;
 }
 
@@ -74,20 +74,6 @@ h2::selection {
 /* Navbar End here */
 
 /* Vertical Button Start here */
-/* .vertical-button1 {
-    font-family: 'OpenSans-Regular';
-    position: fixed;
-    top: 65.5%;
-    right: 0%;
-    transform: translateY(-50%), ;
-    transform: rotate(180deg);
-    writing-mode: vertical-rl;
-    text-align: center;
-    font-weight: 500;
-    border: none;
-    cursor: pointer;
-    z-index: 1050;
-} */
 
 .vertical-button {
     font-family: 'OpenSans-Regular';
@@ -182,6 +168,44 @@ h2::selection {
 
 /* About End here */
 
+/* Career And Placement Start here */
+
+/* Container styles */
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+    border-top: 2px dotted #9d7651;
+    border-bottom: 2px dotted #9d7651;
+}
+
+.marquee {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    animation: scroll-left 20s linear infinite;
+}
+
+.marquee img {
+    width: 100px;
+    height: auto;
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Career And Placement End here */
+
 /* Get More Info Start here */
 .info-inner {
     position: relative;
@@ -234,6 +258,7 @@ h2::selection {
     background: var(--primary);
     color: var(--light);
 }
+
 /* Get More Info Start here */
 
 /* facilities Start */
@@ -440,7 +465,7 @@ h2::selection {
     bottom: -1.5rem;
 }
 
-.campus-item:hover .campus-btn a{
+.campus-item:hover .campus-btn a {
     color: var(--white);
 }
 
@@ -465,4 +490,5 @@ h2::selection {
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 /* Contact Page end */
